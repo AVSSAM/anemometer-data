@@ -10,6 +10,7 @@ class Readings extends Component {
         super();
         this.getData();
     }
+
 	
 	getData = ()=>{
 	
@@ -17,6 +18,16 @@ class Readings extends Component {
 					.then((response) => {
 					  console.log("response =", response.data);
 					  this.setState({data:response.data});
+					  
+					  	
+					
+					
+					  const timer = setTimeout(() => {
+						this.getData();
+					  }, 1000);
+					   clearTimeout(timer);
+
+					  
 					})
 					.catch((error) => {
 					  console.log("error =", error);
