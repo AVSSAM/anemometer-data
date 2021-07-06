@@ -26,7 +26,7 @@ const rows = [
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
-export default function BasicTable() {
+export default function BasicTable(props) {
   const classes = useStyles();
 
   return (
@@ -34,18 +34,18 @@ export default function BasicTable() {
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
+            <TableCell>Timestamp</TableCell>
+            <TableCell align="right">Velocity(MPH)</TableCell>
             
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.name}>
+          {props.data.map((row) => (
+            <TableRow key={row.timestamp}>
               <TableCell component="th" scope="row">
-                {row.name}
+                {row.timestamp}
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
+              <TableCell align="right">{row.velocity}</TableCell>
               
              
             </TableRow>

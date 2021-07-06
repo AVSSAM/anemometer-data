@@ -28,7 +28,7 @@ class Readings extends Component {
     render() { 
         return ( 
             <React.Fragment>
-                <BasicTable/>
+                <BasicTable data={this.state.data}/>
             
             </React.Fragment>
          );
