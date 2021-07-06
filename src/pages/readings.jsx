@@ -9,25 +9,21 @@ class Readings extends Component {
 	 constructor(){
         super();
         this.getData();
+		setInterval(this.getdata,1000);
     }
+	
+	
+					   
 
 	
 	getData = ()=>{
-	
+		
+		console.log("hi");
 		axios.get(URL)
 					.then((response) => {
 					  console.log("response =", response.data);
 					  this.setState({data:response.data});
-					  
-					  	
 					
-					
-					  const timer = setTimeout(() => {
-						this.getData();
-					  }, 1000);
-					   clearTimeout(timer);
-
-					  
 					})
 					.catch((error) => {
 					  console.log("error =", error);
