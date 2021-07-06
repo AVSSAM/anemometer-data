@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import BasicTable from '../components/table'
 const URL = "https://calm-oasis-66138.herokuapp.com/get";
 
 class Readings extends Component {
@@ -15,7 +16,7 @@ class Readings extends Component {
 		axios.get(URL)
 					.then((response) => {
 					  console.log("response =", response.data);
-					  this.setState(data,response.data);
+					  this.setState({data:response.data});
 					})
 					.catch((error) => {
 					  console.log("error =", error);
@@ -27,7 +28,7 @@ class Readings extends Component {
     render() { 
         return ( 
             <React.Fragment>
-                <h1>Hi</h1>
+                <BasicTable/>
             
             </React.Fragment>
          );
