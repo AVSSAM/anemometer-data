@@ -12,17 +12,14 @@ class Readings extends Component {
 		
     }
 	
-	setTimeout(
-    
-     console.log("...hi..."),
-    3000
+	
 );		   
 
 	
 	getData = ()=>{
 		
-		console.log("hi");
-		/*axios.get(URL)
+		
+		axios.get(URL)
 					.then((response) => {
 					  console.log("response =", response.data);
 					  this.setState({data:response.data});
@@ -30,7 +27,7 @@ class Readings extends Component {
 					})
 					.catch((error) => {
 					  console.log("error =", error);
-					});*/
+					});
 	}
 	
 	
