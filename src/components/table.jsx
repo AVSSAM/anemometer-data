@@ -35,7 +35,7 @@ export default function BasicTable(props) {
         <TableHead>
           <TableRow>
             <TableCell>Timestamp</TableCell>
-            <TableCell align="right">Velocity(MPH)</TableCell>
+            <TableCell align="right">Velocity(m/s)</TableCell>
             
           </TableRow>
         </TableHead>
