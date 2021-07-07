@@ -10,10 +10,7 @@ class Readings extends Component {
         super();
         this.getData();
 		
-    }
-	
-	
-);		   
+    }		   
 
 	
 	getData = ()=>{
